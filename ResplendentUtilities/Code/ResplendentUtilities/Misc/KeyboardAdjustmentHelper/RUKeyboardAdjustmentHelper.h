@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RUKeyboardAdjustmentHelperProtocols.h"
+#import <UIKit/UIKit.h>
 
 @interface RUKeyboardAdjustmentHelper : NSObject
 
