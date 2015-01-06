@@ -42,7 +42,7 @@
 {
     UIView* overline = [UIView makeDividerWithColorFloat:colorFloat atXCoord:((self.frame.size.width - width) / 2.0f) atYCoord:yCoord withWidth:width height:height];
     [self addSubview:overline];
-    return overline;    
+    return overline;
 }
 
 -(UIView*)addDividerLineWithColorFloat:(float)colorFloat withWidth:(float)width atYCoord:(float)yCoord
@@ -120,24 +120,24 @@
         [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
         start();
         CATransform3D leftTransform = self.layer.transform;
-
+        
         leftTransform = CATransform3DTranslate(leftTransform, 0, 0, PINE_ANIMATION_TRANSLATION_DEPTH);
         leftTransform = CATransform3DRotate(leftTransform, PINE_ANIMATION_ROTATION_DEGREES, 1, 0, 0);
-
+        
         self.layer.transform = leftTransform;
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:kAnimateWithFallfrontDuration2 animations:^{
             [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
             middle();
             CATransform3D leftTransform = self.layer.transform;
-
+            
             leftTransform = CATransform3DRotate(leftTransform, -PINE_ANIMATION_ROTATION_DEGREES, 1, 0, 0);
             leftTransform = CATransform3DTranslate(leftTransform, 0, 0, PINE_ANIMATION_TRANSLATION_DEPTH);
             
             self.layer.transform = leftTransform;
         } completion:completion];
     }];
-
+    
     return;
 }
 
@@ -146,7 +146,7 @@
     CATransform3D initialTransform = self.layer.transform;
     initialTransform.m34 = 1.0 / -900;
     self.layer.transform = initialTransform;
-
+    
     [UIView animateWithDuration:kAnimateWithFallbackDuration1 animations:^{
         CATransform3D t = self.layer.transform;
         [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
@@ -171,7 +171,7 @@
     CATransform3D initialTransform = self.layer.transform;
     initialTransform.m34 = 1.0 / -900;
     self.layer.transform = initialTransform;
-
+    
     [UIView animateWithDuration:kMoveBackDuration animations:^{
         if (start)
             start();
@@ -187,7 +187,7 @@
     CATransform3D initialTransform = self.layer.transform;
     initialTransform.m34 = 1.0 / -900;
     self.layer.transform = initialTransform;
-
+    
     [UIView animateWithDuration:kMoveBackDuration animations:^{
         if (start)
             start();
