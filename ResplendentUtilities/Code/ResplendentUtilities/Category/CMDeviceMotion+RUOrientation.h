@@ -7,6 +7,7 @@
 //
 
 #import <CoreMotion/CoreMotion.h>
+#import <UIKit/UIKit.h>
 
 
 
