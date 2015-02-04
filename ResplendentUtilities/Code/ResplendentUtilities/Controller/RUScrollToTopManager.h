@@ -12,6 +12,7 @@
 
 
 
+
 @interface RUScrollToTopManager : NSObject
 
 +(void)popOffStack:(UIScrollView*)scrollView;

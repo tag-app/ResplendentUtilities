@@ -55,3 +55,30 @@ if (alertView != nil) \
 } \
 return returnValue; \
 }
+
+
+
+#define kRUConditionalReturn_ReturnValue(condition,assert,returnValue) \
+if (condition) { \
+NSAssert((!assert),@"Failed condition"); \
+return returnValue; \
+}
+
+#define kRUConditionalReturn_ReturnValueNil(condition,assert) \
+kRUConditionalReturn_ReturnValue(condition,assert,nil)
+
+#define kRUConditionalReturn_ReturnValueFalse(condition,assert) \
+kRUConditionalReturn_ReturnValue(condition,assert,false)
+
+#define kRUConditionalReturn_ReturnValueTrue(condition,assert) \
+kRUConditionalReturn_ReturnValue(condition,assert,true)
+
+#define kRUConditionalReturn_AlertView_ReturnValue(condition,assert,alertView,returnValue) \
+if (condition) { \
+	NSAssert((!assert),@"Failed condition"); \
+	if (alertView != nil) \
+	{ \
+		[alertView show]; \
+	} \
+	return returnValue; \
+}
