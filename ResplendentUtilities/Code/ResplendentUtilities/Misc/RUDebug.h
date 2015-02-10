@@ -10,5 +10,5 @@
 
 #ifndef kRUDebugSilenceRUDLog
 #define kRUDebugSilenceRUDLog !DEBUG
-#define kRUDebubEnableDetailedRUDLog 0
+#define kRUDebubEnableDetailedRUDLog 1
 #endif
