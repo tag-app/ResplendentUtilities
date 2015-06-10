@@ -306,7 +306,8 @@ ABPropertyID abMultiValueRefForPersonWithPropertyType(kRUAddressBookUtilPhonePro
 #pragma mark - Static methods
 +(BOOL)usesNativePermissions
 {
-    return (ABAddressBookRequestAccessWithCompletion != nil);
+//    return (ABAddressBookRequestAccessWithCompletion != nil);
+    return YES;
 }
 
 +(void)askUserForPermissionWithCompletion:(RUAddressBookUtilAskForPermissionsCompletionBlock)completion
